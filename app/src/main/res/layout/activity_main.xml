@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ahmed.ameen.weather.MainActivity"
+    android:background="#2B3948"
+    android:id="@+id/mainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="60dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_location"
+                android:layout_marginTop="22dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cityName"
+                android:text="City"
+                android:textStyle="bold"
+                style="@style/textStyle"
+                android:padding="15dp"
+                android:gravity="center"
+                android:layout_marginLeft="25dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/realtiveTemp">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageLayout"
+                android:padding="10dp"
+                android:layout_marginLeft="40dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/imageStatus"
+                    android:src="@drawable/ic_unknown" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cityTemp"
+                android:text="30"
+                android:textSize="60dp"
+                android:layout_marginLeft="20dp"
+                style="@style/textStyle"
+                android:layout_toRightOf="@id/imageLayout"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tempSympole"
+                android:text="°"
+                style="@style/textStyle"
+                android:layout_marginLeft="5dp"
+                android:textSize="40dp"
+                android:layout_toRightOf="@id/cityTemp"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonCityData"
+            android:text="City Weather"
+            android:layout_marginTop="30dp"/>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
